@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+include /usr/share/ql-deb-utils/Makefile
+
+%:
+	dh $@ --with=autotools-dev
+
+override_dh_auto_configure:
+	./autogen.sh
+	dh_auto_configure -- --with-system-pgm --with-sodium
+
+override_dh_strip:
+	dh_strip --dbg-package=libzmq4-dbg
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f configure doc/Makefile.in src/Makefile.in src/platform.hpp.in \
+	      tests/Makefile.in

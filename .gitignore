@@ -140,3 +140,12 @@ local_lat
 local_thr
 remote_lat
 remote_thr
+build
+debian/files
+debian/*.substvars
+debian/*.debhelper
+debian/*.log
+debian/libzmq4-dbg
+debian/libzmq4-dev
+debian/libzmq4
+debian/tmp
