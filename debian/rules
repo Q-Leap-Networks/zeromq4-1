@@ -15,4 +15,7 @@ override_dh_strip:
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -f configure doc/Makefile.in src/Makefile.in src/platform.hpp.in \
-	      tests/Makefile.in
+	      tests/Makefile.in Makefile.in aclocal.m4 \
+	      builds/msvc/Makefile.in config/compile config/depcomp \
+	      config/install-sh config/libtool.m4 config/ltmain.sh \
+	      config/missing config/test-driver
